@@ -1,0 +1,143 @@
+Pseudo Codigo
+
+Problema 1:
+
+Inicio
+	Entero cont = 0
+	Entero positivo = 0
+	Entero negativo = 0
+	Entero cero = 0
+	Inprimir ("Este programa cuenta cuantos numeros son positivos, negativos o cero")
+	Mientras cont < 3 Hacer
+		Imprimir("Ingrese un numero")
+		Leer x
+		Si x < 0 entonces
+			negativo = negativo+1
+		SiNo
+			Si x > 0 entonces
+				positivo = positivo+1
+			SiNo
+				cero = cero+1
+			FinSi
+		FinSi
+		cont = cont+1
+	FinMientras
+	Inprimir ("Hay " postivo " positivos, " negativo " negativos y " cero "ceros.")
+Fin
+
+
+Problema 2:
+
+Incio
+	Entero Primo = 0
+	Imprimir ("Ingrese un entero positivo")
+	Leer Entero Numero
+	Digitos = []		\\Esta es una lista
+	Mientras Numero > 0 Hacer
+		Comodin = Numero MOD 10
+		Agregar Comodin a Digitos
+		Numero = trunc(Numero / 10)
+	FinMientras
+	Para Cada Elemento en Digitos Hacer
+		Segun Elemento Hacer:
+			Caso Elemento = 2:
+				Primo = Primo+1
+			FinCaso		
+			Caso Elemento = 3:
+				Primo = Primo+1
+			FinCaso	
+			Caso Elemento = 5:
+				Primo = Primo+1
+			FinCaso	
+			Caso Elemento = 7:
+				Primo = Primo+1
+			FinCaso
+		FinSegun
+	FinPara		
+	Imprimir ("Hay " Primo " Digitos primos")		
+Fin
+
+Problema 3:
+
+
+Inicio
+	Real Sueldo
+	Real Suma = 0
+	Real Contador_Lista = 0
+	Real Varianza
+	Real Cuadrados = 0
+	Real Resta
+	Entero Contador_Mayor = 0
+	Lista_Sueldos = []
+	Entero Cont = 0
+	Imprimir ("Ingrese los sueldos de los trabajadores")
+	Imprimir ("Para terminar ingrese 0")
+	Mientras Cont = 0 Hacer
+		Leer Sueldo
+		Si Sueldo = 0 Entonces
+			Cont = Cont + 1
+		SiNo 
+			Agregar Sueldo a Lista_Sueldos
+		FinSi
+	FinMientras
+	Para i = 0 Hasta longitud(Lista_Sueldos)-1 Hacer
+		Suma = Suma + Lista_Sueldos[i]
+		Contador_Lista = Contador_Lista + 1
+	FinPara
+	Real Promedio = Suma / Contador_Lista
+	Para i = 0 Hasta longitud(Lista_Sueldos)-1 Hacer
+		Si Lista_Sueldos[i] > Promedio
+			Contador_Mayor = Contador_Mayor + 1
+		FinSi
+	FinPara
+	Imprimir (Contador_Mayor " personas ganan arriba del promedio")
+	Para i = 0 Hasta longitud(Lista_Sueldos)-1 Hacer
+		Resta = Lista_Sueldos[i] - Promedio
+		Cuadrados = Cuadrados + ( Resta * Resta )		
+	FinPara 
+	Varianza = Cuadrados / Contador_Lista
+	Desviacion = Varianza ^ ( 1 / 2 )
+	Imprimir ("La Desviacion Estandar es" Desviacion)
+Fin
+
+
+
+Problema 4
+
+Inicio
+	Real x
+	Real f
+	Imprimir ("Ingrese cualquier numero real")
+	Leer x
+	Si ( x < 0 ) Entonces
+		f = x * x
+	SiNo Si ( x >= 0 AND x <= 10 ) Entonces
+		f = 2 * x + 1
+	SiNo
+		f = 3 * x - 5
+	FinSi
+	Imprimir ("f es igual a" x)
+Fin
+
+
+
+Problema 5
+
+Inicio
+	Entero Numero
+	Entero Comodin
+	Entero i
+	Cadena = ""
+	Lista_Binaria = []
+	Mientras Numero > 0 Hacer
+		Comodin = Numero MOD 2
+		Agregar Comodin a Lista_Binaria
+		Numero = trunc(Numero / 2)
+	FinMientras
+	i = longitud(Lista_Binaria) - 1
+	Mientras i > -1 Hacer
+		Cadena = Cadena + ConvertirATexto(List_Binaria[i])
+		i = i - 1
+	FinMientras
+	Imprimir ("La representacion binaria de " Numero " es " Cadena)
+	Fin 
